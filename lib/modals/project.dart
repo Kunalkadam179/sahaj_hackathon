@@ -1,15 +1,14 @@
 import 'package:sahaj_hackathon/modals/student.dart';
 
 class Project{
-  String statement;
-  List<String> techStack;
-  List<Student> team;
-  String clgId;
-  String company;
-  String github;
-  String host;
-  int rating;
-  int status;
+  final String statement;
+  final List<String> techStack;
+  final List<Student> team;
+  final String clgId;
+  final String company;
+  final String github;
+  final String youtube;
+  final int status;
 
   Project({
       required this.statement,
@@ -18,8 +17,8 @@ class Project{
       required this.clgId,
       required this.company,
       required this.github,
-      required this.host,
-      required this.rating,
-      required this.status}); //1->available 2->ongoing 3->completed
+      required this.status,
+      required this.youtube
+  }); //1->available 2->ongoing 3->completed
 
 }

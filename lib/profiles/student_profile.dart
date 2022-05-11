@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:sahaj_hackathon/company/projectList.dart';
 
 class StudentProfileWidget extends StatefulWidget {
   const StudentProfileWidget({Key? key}) : super(key: key);
@@ -17,6 +18,27 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer:  Drawer(
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child:Image.asset('Images/college_image.jpeg')
+            ),
+            Text('College Name',style: TextStyle(color: Colors.grey,height: 2),),
+            ListTile(
+              title: const Text('List of projects under College'),
+              onTap: () {
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>ProjectList()));
+              },
+            ),
+          ],
+        ),
+      ),
       key: scaffoldKey,
       appBar: AppBar(
         automaticallyImplyLeading: false,

@@ -5,7 +5,6 @@ class Company{
   String name;
   String id;
   String description;
-  Map<College,Project> work;
 
-  Company({required this.name, required this.id, required this.description, required this.work});
+  Company({required this.name, required this.id, required this.description});
 }

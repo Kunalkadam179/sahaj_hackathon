@@ -40,28 +40,36 @@ class _CollegeListState extends State<CollegeList> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: ListView.builder(
-            itemCount: 10,
-            itemBuilder: (BuildContext context, int index){
-              return Card(
-                shadowColor: Colors.blue,
-                color: Colors.green,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    ListTile(
-                      onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => ProjectList()));
-                      },
-                      leading: Icon(Icons.album),
-                      title: Text('College Name'),
-                      // subtitle: Text('Sorted according to status'),
+          child: SizedBox(
+            height: 1000,
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index){
+                return ListTile(
+                  title: SizedBox(
+                    height: 150,
+                    child: Card(
+                      shadowColor: Colors.blue,
+                      color: Colors.green,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          ListTile(
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => ProjectList()));
+                            },
+                            leading: Icon(Icons.album),
+                            title: Text('College Name'),
+                            // subtitle: Text('Sorted according to status'),
+                          ),
+                          SizedBox(height: 40,)
+                        ],
+                      ),
                     ),
-                    SizedBox(height: 40,)
-                  ],
-                ),
-              );
-            },
+                  ),
+                );
+              },
+            ),
           ),
         ),
       ),
