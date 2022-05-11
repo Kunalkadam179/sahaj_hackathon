@@ -230,8 +230,8 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                             Text(
                               'Team Members',
                               style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 10.0
+                                  fontFamily: 'Poppins',
+                                  fontSize: 10.0
                               ),
                             ),
                             SizedBox(

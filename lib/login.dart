@@ -1,10 +1,14 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:sahaj_hackathon/dashboards/collegeDashboard.dart';
 import 'package:sahaj_hackathon/modals/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:http/http.dart'as http;
+import 'package:sahaj_hackathon/profiles/collegeProfile.dart';
+import 'package:sahaj_hackathon/profiles/companyProfile.dart';
+import 'package:sahaj_hackathon/profiles/student_profile.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -16,12 +20,16 @@ class LoginPage extends StatelessWidget {
 
   final box=GetStorage();
 
+  int _login(){
+    return 1;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 colors: [
@@ -34,36 +42,36 @@ class LoginPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 80,),
+            const SizedBox(height: 80,),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  FadeAnimation(1, Text("Login", style: TextStyle(color: Colors.white, fontSize: 40),)),
-                  SizedBox(height: 10,),
-                  FadeAnimation(1.3, Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 18),)),
+                  FadeAnimation(1, const Text("Login", style: TextStyle(color: Colors.white, fontSize: 40),)),
+                  const SizedBox(height: 10,),
+                  FadeAnimation(1.3, const Text("Welcome Back", style: TextStyle(color: Colors.white, fontSize: 18),)),
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Expanded(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.white,
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60))
+                    borderRadius: BorderRadius.only(topLeft: const Radius.circular(60), topRight: Radius.circular(60))
                 ),
                 child: SingleChildScrollView(
                   child: Padding(
-                    padding: EdgeInsets.all(30),
+                    padding: const EdgeInsets.all(30),
                     child: Column(
                       children: <Widget>[
-                        SizedBox(height: 60,),
+                        const SizedBox(height: 60,),
                         FadeAnimation(1.4, Container(
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
-                              boxShadow: [BoxShadow(
+                              boxShadow: [const BoxShadow(
                                   color: Colors.lightGreen,
                                   blurRadius: 20,
                                   offset: Offset(0, 10)
@@ -72,12 +80,12 @@ class LoginPage extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    border: Border(bottom: BorderSide(color: Colors.grey))
+                                padding: const EdgeInsets.all(10),
+                                decoration: const BoxDecoration(
+                                    border: const Border(bottom: BorderSide(color: Colors.grey))
                                 ),
                                 child: TextField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       hintText: "userId",
                                       hintStyle: TextStyle(color: Colors.grey),
                                       border: InputBorder.none
@@ -88,12 +96,12 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ),
                               Container(
-                                padding: EdgeInsets.all(10),
-                                decoration: BoxDecoration(
-                                    border: Border(bottom: BorderSide(color: Colors.grey))
+                                padding: const EdgeInsets.all(10),
+                                decoration: const BoxDecoration(
+                                    border: Border(bottom: const BorderSide(color: Colors.grey))
                                 ),
                                 child: TextField(
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                       hintText: "Password",
                                       hintStyle: TextStyle(color: Colors.grey),
                                       border: InputBorder.none
@@ -107,10 +115,10 @@ class LoginPage extends StatelessWidget {
                           ),
                         )),
 
-                        SizedBox(height: 40,),
+                        const SizedBox(height: 40,),
                         FadeAnimation(1.6, Container(
                           height: 50,
-                          margin: EdgeInsets.symmetric(horizontal: 50),
+                          margin: const EdgeInsets.symmetric(horizontal: 50),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50),
                               color: Colors.lightGreen[600]
@@ -118,9 +126,19 @@ class LoginPage extends StatelessWidget {
                           child: Center(
                             child: FlatButton(
                                 onPressed: () async{
-
+                                  if(_login() == 1) {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> CompanyProfile()));
+                                  }
+                                  else if(_login() == 2)
+                                  {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const CollegeProfile()));
+                                  }
+                                  else
+                                  {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const StudentProfileWidget()));
+                                  }
                                 },
-                                child: Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)
+                                child: const Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)
 
                             ),
 

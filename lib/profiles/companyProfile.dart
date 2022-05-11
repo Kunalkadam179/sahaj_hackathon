@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sahaj_hackathon/company/collegeList.dart';
+import 'package:sahaj_hackathon/company/projectList.dart';
 
 class CompanyProfile extends StatefulWidget {
 
@@ -75,13 +77,13 @@ class _CompanyProfileState extends State<CompanyProfile> {
             ListTile(
               title: const Text('Project List'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> ProjectList(1)));
               },
             ),
             ListTile(
               title: const Text('College List'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> CollegeList()));
               },
             ),
           ],
