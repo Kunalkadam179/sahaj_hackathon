@@ -2,7 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CompanyProfile extends StatefulWidget {
-  const CompanyProfile({Key? key}) : super(key: key);
+
+  static String id='companyProfile';
 
   @override
   State<CompanyProfile> createState() => _CompanyProfileState();
@@ -17,6 +18,7 @@ class _CompanyProfileState extends State<CompanyProfile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: RefreshIndicator(
           onRefresh: _func,
           child: ListView.builder(

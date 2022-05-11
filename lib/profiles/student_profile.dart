@@ -41,17 +41,6 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
       ),
       key: scaffoldKey,
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_rounded,
-            color: Colors.white,
-            size: 30,
-          ),
-          onPressed: () {
-            print('IconButton pressed ...');
-          },
-        ),
         title: Text(
           'Student Profile',
           style: TextStyle(

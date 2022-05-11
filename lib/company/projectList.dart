@@ -39,28 +39,34 @@ class _ProjectListState extends State<ProjectList> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: ListView.builder(
-            itemCount: 10,
-            itemBuilder: (BuildContext context, int index){
-              return Card(
-                shadowColor: Colors.blue,
-                color: Colors.green,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    ListTile(
-                      onTap: () {
-                        print('On Tap Function');
-                      },
-                      leading: Icon(Icons.album),
-                      title: Text('Project Name'),
-                      // subtitle: Text('Sorted according to status'),
+          child: SizedBox(
+            height: 1000,
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index){
+                return SizedBox(
+                  height: 104,
+                  child: Card(
+                    shadowColor: Colors.blue,
+                    color: Colors.green,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        ListTile(
+                          onTap: () {
+                            print('On Tap Function');
+                          },
+                          leading: Icon(Icons.album),
+                          title: Text('Project Name'),
+                          // subtitle: Text('Sorted according to status'),
+                        ),
+                        SizedBox(height: 40,)
+                      ],
                     ),
-                    SizedBox(height: 40,)
-                  ],
-                ),
-              );
-            },
+                  ),
+                );
+              },
+            ),
           ),
         ),
       ),
