@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sahaj_hackathon/projects/applicationScreen.dart';
+import 'package:sahaj_hackathon/projects/project_info.dart';
 
 class ProjectList extends StatefulWidget {
 
@@ -58,7 +59,7 @@ class _ProjectListState extends State<ProjectList> {
                       children: <Widget>[
                         ListTile(
                           onTap: () {
-                            print('On Tap Function');
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => ProjectDetailsWidget()));
                           },
                           leading: Icon(Icons.album),
                           title: Text('Project Name'),

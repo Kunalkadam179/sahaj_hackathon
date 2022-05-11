@@ -3,7 +3,7 @@ import 'package:sahaj_hackathon/modals/student.dart';
 class Project{
   final String statement;
   final List<String> techStack;
-  final List<Student> team;
+  final List<String> team;
   final String clgId;
   final String company;
   final String github;

@@ -54,7 +54,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
             size: 30,
           ),
           onPressed: () {
-            print('IconButton pressed ...');
+            Navigator.pop(context);
           },
         ),
         title: const Text(
@@ -117,78 +117,62 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          const SizedBox(
-                            child: Text(
+                          Text(
+                            'Problem Statement',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          Text(
+                            'Statement',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          Text(
+                            'Description',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          Text(
+                            'Description of the Project',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          Text(
+                            'Technical Stack',
+                            style: const TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          const Text(
+                            'Flutter, ReactJs, Django',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          const Text(
+                            'Github Repo Link',
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 10.0,
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () => openUrl(''),
+                            child: const Text(
                               'Problem Statement',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 10.0,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            child: Text(
-                              'Statement',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 10.0,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            child: Text(
-                              'Description',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 10.0,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            child: Text(
-                              'Description of the Project',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 10.0,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            child: Text(
-                              'Technical Stack',
                               style: const TextStyle(
                                 fontFamily: 'Poppins',
-                                fontSize: 10.0,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            child: const Text(
-                              'Flutter, ReactJs, Django',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 10.0,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            child: const Text(
-                              'Github Repo Link',
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                                fontSize: 10.0,
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            child: InkWell(
-                              onTap: () => openUrl(''),
-                              child: const Text(
-                                'Problem Statement',
-                                style: const TextStyle(
-                                  fontFamily: 'Poppins',
-                                  fontSize: 10.0,
-                                ),
+                                fontSize: 15.0,
                               ),
                             ),
                           ),
@@ -230,7 +214,7 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                     padding: const EdgeInsetsDirectional.fromSTEB(2, 2, 2, 2),
                     child: Container(
                       width: double.infinity,
-                      height: 50,
+                      // height: 500,
                       decoration: BoxDecoration(
                         color: const Color(0xFFEEEEEE),
                         borderRadius: BorderRadius.circular(10),
@@ -239,32 +223,36 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                           width: 2,
                         ),
                       ),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            child: Text(
+                      child: SizedBox(
+                        height: 100,
+                        child: Column(
+                          children: [
+                            Text(
                               'Team Members',
                               style: TextStyle(
                                 fontFamily: 'Poppins',
                                 fontSize: 10.0
                               ),
                             ),
-                          ),
-                          ListView.builder(
-                            itemCount: 4,
-                            itemBuilder: (BuildContext context, int index){
-                              return SizedBox(
-                                child: Text(
-                                  'Team Member 1',
-                                  style: TextStyle(
-                                      fontFamily: 'Poppins',
-                                      fontSize: 10.0
-                                  ),
-                                ),
-                              );
-                            },
-                          ),
-                        ],
+                            SizedBox(
+                              height: 80,
+                              child: ListView.builder(
+                                itemCount: 4,
+                                itemBuilder: (BuildContext context, int index){
+                                  return SizedBox(
+                                    child: Text(
+                                      'Team Member 1',
+                                      style: TextStyle(
+                                          fontFamily: 'Poppins',
+                                          fontSize: 10.0
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
