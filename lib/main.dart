@@ -9,6 +9,7 @@ import 'package:sahaj_hackathon/modals/company.dart';
 import 'package:sahaj_hackathon/profiles/collegeProfile.dart';
 import 'package:sahaj_hackathon/profiles/companyProfile.dart';
 import 'package:sahaj_hackathon/profiles/student_profile.dart';
+import 'package:sahaj_hackathon/projects/applicationScreen.dart';
 import 'package:sahaj_hackathon/projects/newProjectReq.dart';
 
 void main() async{
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         NewProjectRequirements.id:(context)=>NewProjectRequirements(),
         CollegeList.id:(context)=>CollegeList(),
         CompanyProfile.id:(context)=>CompanyProfile(),
-        ProjectList.id:(context)=>ProjectList(1)
+        ProjectList.id:(context)=>ProjectList(1),
+        ProjectApplication.id:(context)=>const ProjectApplication(),
       },
     );
   }

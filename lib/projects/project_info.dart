@@ -135,6 +135,24 @@ class _ProjectDetailsWidgetState extends State<ProjectDetailsWidget> {
                               ),
                             ),
                           ),
+                          SizedBox(
+                            child: Text(
+                              'Description',
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 10.0,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            child: Text(
+                              'Description of the Project',
+                              style: TextStyle(
+                                fontFamily: 'Poppins',
+                                fontSize: 10.0,
+                              ),
+                            ),
+                          ),
                           const SizedBox(
                             child: Text(
                               'Technical Stack',

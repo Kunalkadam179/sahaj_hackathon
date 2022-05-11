@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sahaj_hackathon/projects/applicationScreen.dart';
 
 class ProjectList extends StatefulWidget {
 
@@ -62,7 +63,12 @@ class _ProjectListState extends State<ProjectList> {
                           leading: Icon(Icons.album),
                           title: Text('Project Name'),
                           // subtitle: Text('Sorted according to status'),
-                          trailing: FlatButton(onPressed: (){}, child: Text(widget.type==1?'BUY':'APPLY',style: TextStyle(backgroundColor: Colors.blue),)),
+                          trailing: FlatButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => ProjectApplication()));
+                            },
+                            child: Text(widget.type==1?'BUY':'APPLY',style: TextStyle(backgroundColor: Colors.blue),),
+                          ),
                         ),
                         SizedBox(height: 40,)
                       ],
