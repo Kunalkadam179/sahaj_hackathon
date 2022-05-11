@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: CollegeDashboard.id,
+      initialRoute: StudentProfileWidget.id,
       routes: {
         CollegeProfile.id:(context)=>const CollegeProfile(),
         StudentProfileWidget.id:(context)=>const StudentProfileWidget(),
