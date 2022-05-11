@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:simple_animations/simple_animations.dart';
 
-import 'package:sahaj_hackathon/modals/animation.dart';
 class FadeAnimation extends StatelessWidget {
   final double delay;
   final Widget child;

@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:sahaj_hackathon/dashboards/collegeDashboard.dart';
+import 'package:sahaj_hackathon/login.dart';
 import 'package:sahaj_hackathon/profiles/collegeProfile.dart';
 import 'package:sahaj_hackathon/profiles/student_profile.dart';
 
-void main() {
+void main() async{
+
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
@@ -15,11 +19,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: StudentProfileWidget.id,
+      initialRoute: CollegeProfile.id,
       routes: {
         CollegeProfile.id:(context)=>const CollegeProfile(),
         StudentProfileWidget.id:(context)=>const StudentProfileWidget(),
-        CollegeDashboard.id:(context)=>CollegeDashboard()
+        CollegeDashboard.id:(context)=>CollegeDashboard(),
+        LoginPage.id:(context)=>LoginPage()
       },
     );
   }

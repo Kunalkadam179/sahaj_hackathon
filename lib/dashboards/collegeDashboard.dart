@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:sahaj_hackathon/profiles/collegeProfile.dart';
 
 class CollegeDashboard extends StatefulWidget {
   const CollegeDashboard({Key? key}) : super(key: key);
@@ -15,8 +16,13 @@ class _CollegeDashboardState extends State<CollegeDashboard> {
       appBar: AppBar(
         title: Text("College Name",),
         actions: [
-          Icon(
-              Icons.account_circle
+          FlatButton(
+            child: Icon(
+                Icons.account_circle
+            ),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>CollegeProfile()));
+            },
           )
         ],
       ),

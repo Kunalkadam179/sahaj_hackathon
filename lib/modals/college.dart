@@ -9,7 +9,7 @@ class College{
   List<Student>students;
   List<Project>projects;
   List<Company>companies;
-
-  College(
-      this.name, this.location, this.students, this.projects, this.companies);
+  String ambassador;
+  String contact;
+  College({required this.name, required this.location, required this.students, required this.projects, required this.companies,required this.ambassador,required this.contact});
 }

@@ -26,13 +26,18 @@ class _CollegeProfileState extends State<CollegeProfile> {
           onRefresh: _func,
           child: ListView.builder(
             itemBuilder: (BuildContext context,int index){
-              return ListTile(
-                  title:Text(
-                      'Project name',
-                      style: TextStyle(
-                        fontSize: 22.0,
+              return Column(
+                children: [
+                  ListTile(
+                      title:Text(
+                          'Project name',
+                          style: TextStyle(
+                            fontSize: 22.0,
+                          )
                       )
-                  )
+                  ),
+                  Divider(thickness: 3,)
+                ],
               );
             },
             itemCount: 10,
@@ -44,14 +49,25 @@ class _CollegeProfileState extends State<CollegeProfile> {
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text('College Name'),
+            DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.blue,
+                ),
+                child:Image.asset('Images/college_image.jpeg')
             ),
+            Text('College Name',style: TextStyle(color: Colors.grey,height: 2),),
             ListTile(
               title: const Text('location'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),ListTile(
+              title: const Text('Ambassador'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),ListTile(
+              title: const Text('contact'),
               onTap: () {
                 Navigator.pop(context);
               },
