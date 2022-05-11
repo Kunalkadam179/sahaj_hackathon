@@ -56,7 +56,7 @@ class _CollegeListState extends State<CollegeList> {
                         children: <Widget>[
                           ListTile(
                             onTap: (){
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => ProjectList()));
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => ProjectList(1)));
                             },
                             leading: Icon(Icons.album),
                             title: Text('College Name'),

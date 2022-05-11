@@ -33,7 +33,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
             ListTile(
               title: const Text('List of projects under College'),
               onTap: () {
-                Navigator.push(context,MaterialPageRoute(builder: (context)=>ProjectList()));
+                Navigator.push(context,MaterialPageRoute(builder: (context)=>ProjectList(2)));
               },
             ),
           ],

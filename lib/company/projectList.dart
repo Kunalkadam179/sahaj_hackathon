@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ProjectList extends StatefulWidget {
-  const ProjectList({Key? key}) : super(key: key);
+
+  int type=0;
+
+  ProjectList(this.type); //1==company  2==student
 
   static String id='projectList';
 
@@ -22,7 +25,7 @@ class _ProjectListState extends State<ProjectList> {
             size: 30,
           ),
           onPressed: () {
-            print('IconButton pressed ...');
+            Navigator.pop(context);
           },
         ),
         title: Text(
@@ -59,6 +62,7 @@ class _ProjectListState extends State<ProjectList> {
                           leading: Icon(Icons.album),
                           title: Text('Project Name'),
                           // subtitle: Text('Sorted according to status'),
+                          trailing: FlatButton(onPressed: (){}, child: Text(widget.type==1?'BUY':'APPLY',style: TextStyle(backgroundColor: Colors.blue),)),
                         ),
                         SizedBox(height: 40,)
                       ],
