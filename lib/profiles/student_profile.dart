@@ -1,21 +1,17 @@
-import '../flutter_flow/flutter_flow_icon_button.dart';
-import '../flutter_flow/flutter_flow_theme.dart';
-import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class StudentProfileWidget extends StatefulWidget {
-  const StudentProfileWidget({Key key}) : super(key: key);
+  const StudentProfileWidget({Key? key}) : super(key: key);
 
   @override
   _StudentProfileWidgetState createState() => _StudentProfileWidgetState();
 }
 
 class _StudentProfileWidgetState extends State<StudentProfileWidget> {
-  double ratingBarValue1;
-  double ratingBarValue2;
-  double ratingBarValue3;
+  double ratingBarValue1 = 0.0;
+  double ratingBarValue2 = 0.0;
+  double ratingBarValue3 = 0.0;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -23,13 +19,8 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
-        leading: FlutterFlowIconButton(
-          borderColor: Colors.transparent,
-          borderRadius: 30,
-          borderWidth: 1,
-          buttonSize: 60,
+        leading: IconButton(
           icon: Icon(
             Icons.arrow_back_rounded,
             color: Colors.white,
@@ -41,7 +32,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
         ),
         title: Text(
           'Student Profile',
-          style: FlutterFlowTheme.of(context).title2.override(
+          style: TextStyle(
             fontFamily: 'Poppins',
             color: Colors.white,
             fontSize: 22,
@@ -51,7 +42,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
         centerTitle: true,
         elevation: 2,
       ),
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      // backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -91,9 +82,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                   children: [
                                     Text(
                                       'Name',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
@@ -101,9 +90,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                     ),
                                     Text(
                                       'Name',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                       ),
@@ -122,9 +109,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                   children: [
                                     Text(
                                       'ID',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
@@ -132,9 +117,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                     ),
                                     Text(
                                       'Name',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                       ),
@@ -153,9 +136,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                   children: [
                                     Text(
                                       'LinkedIn',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
@@ -163,9 +144,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                     ),
                                     Text(
                                       'Name',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                       ),
@@ -194,7 +173,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                       child: Text(
                         'Skills',
                         textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                        style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 30,
                         ),
@@ -230,9 +209,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                   children: [
                                     Text(
                                       'C++',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
@@ -243,16 +220,14 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                               () => ratingBarValue1 = newValue),
                                       itemBuilder: (context, index) => Icon(
                                         Icons.star_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryColor,
+                                        color: Colors.white,
                                       ),
                                       direction: Axis.horizontal,
                                       initialRating: ratingBarValue1 ??= 3,
                                       unratedColor: Color(0xFF9E9E9E),
                                       itemCount: 5,
                                       itemSize: 40,
-                                      glowColor: FlutterFlowTheme.of(context)
-                                          .secondaryColor,
+                                      glowColor: Colors.blue,
                                     ),
                                   ],
                                 ),
@@ -268,9 +243,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                   children: [
                                     Text(
                                       'Java',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
@@ -281,16 +254,14 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                               () => ratingBarValue2 = newValue),
                                       itemBuilder: (context, index) => Icon(
                                         Icons.star_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryColor,
+                                        color: Colors.white,
                                       ),
                                       direction: Axis.horizontal,
                                       initialRating: ratingBarValue2 ??= 3,
                                       unratedColor: Color(0xFF9E9E9E),
                                       itemCount: 5,
                                       itemSize: 40,
-                                      glowColor: FlutterFlowTheme.of(context)
-                                          .secondaryColor,
+                                      glowColor: Colors.blue,
                                     ),
                                   ],
                                 ),
@@ -306,9 +277,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                   children: [
                                     Text(
                                       'Flutter',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
+                                      style: TextStyle(
                                         fontFamily: 'Poppins',
                                         fontSize: 20,
                                         fontWeight: FontWeight.w600,
@@ -319,16 +288,14 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                               () => ratingBarValue3 = newValue),
                                       itemBuilder: (context, index) => Icon(
                                         Icons.star_rounded,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryColor,
+                                        color: Colors.white,
                                       ),
                                       direction: Axis.horizontal,
                                       initialRating: ratingBarValue3 ??= 3,
                                       unratedColor: Color(0xFF9E9E9E),
                                       itemCount: 5,
                                       itemSize: 40,
-                                      glowColor: FlutterFlowTheme.of(context)
-                                          .secondaryColor,
+                                      glowColor: Colors.blue,
                                     ),
                                   ],
                                 ),
@@ -354,7 +321,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                       child: Text(
                         'Projects',
                         textAlign: TextAlign.center,
-                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                        style: TextStyle(
                           fontFamily: 'Poppins',
                           fontSize: 30,
                         ),
@@ -385,16 +352,16 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                 child: ListTile(
                                   title: Text(
                                     'Project Title',
-                                    style: FlutterFlowTheme.of(context).title1,
+                                    // style: FlutterFlowTheme.of(context).title1,
                                   ),
                                   trailing: Icon(
                                     Icons.arrow_forward_ios,
                                     color: Color(0xFF303030),
                                     size: 20,
                                   ),
-                                  tileColor:
-                                  FlutterFlowTheme.of(context).primaryText,
-                                  dense: false,
+                                  // FlutterFlowTheme.of(context).primaryText,
+                                  // dense: false,
+                                  tileColor: Color(0xFFF5F5F5),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10),
                                   ),
@@ -403,7 +370,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                               ListTile(
                                 title: Text(
                                   'Project Title',
-                                  style: FlutterFlowTheme.of(context).title1,
+                                  // style: FlutterFlowTheme.of(context).title1,
                                 ),
                                 trailing: Icon(
                                   Icons.arrow_forward_ios,
@@ -416,7 +383,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                               ListTile(
                                 title: Text(
                                   'Project Title',
-                                  style: FlutterFlowTheme.of(context).title1,
+                                  // style: FlutterFlowTheme.of(context).title1,
                                 ),
                                 trailing: Icon(
                                   Icons.arrow_forward_ios,
@@ -429,7 +396,7 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                               ListTile(
                                 title: Text(
                                   'Project Title',
-                                  style: FlutterFlowTheme.of(context).title1,
+                                  // style: FlutterFlowTheme.of(context).title1,
                                 ),
                                 trailing: Icon(
                                   Icons.arrow_forward_ios,
