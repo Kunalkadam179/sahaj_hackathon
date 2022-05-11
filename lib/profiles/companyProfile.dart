@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sahaj_hackathon/screens/collegeProjectList.dart';
 
 class CompanyProfile extends StatefulWidget {
   const CompanyProfile({Key? key}) : super(key: key);
@@ -32,7 +31,7 @@ class _CompanyProfileState extends State<CompanyProfile> {
                           )
                       ),
                     onTap: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=>CollegeProjectList()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context)=>CollegeProjectList()));
                     },
                   ),
                   Divider(thickness: 3,)
