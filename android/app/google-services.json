@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "158627931957",
+    "project_id": "sahajhackathon-70233",
+    "storage_bucket": "sahajhackathon-70233.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158627931957:android:0c1d8eecae725b2bb90e7c",
+        "android_client_info": {
+          "package_name": "com.example.sahaj_hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158627931957-g0u7pu7tqe065uulp7foj5fpn6q59oar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8b_yp668JRl6tNjinK9Pq9XRe68lFk_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158627931957-g0u7pu7tqe065uulp7foj5fpn6q59oar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

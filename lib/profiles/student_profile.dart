@@ -3,7 +3,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class StudentProfileWidget extends StatefulWidget {
   const StudentProfileWidget({Key? key}) : super(key: key);
-
+  static String id='student_profile';
   @override
   _StudentProfileWidgetState createState() => _StudentProfileWidgetState();
 }
@@ -220,10 +220,10 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                               () => ratingBarValue1 = newValue),
                                       itemBuilder: (context, index) => Icon(
                                         Icons.star_rounded,
-                                        color: Colors.white,
+                                        color: Colors.green,
                                       ),
                                       direction: Axis.horizontal,
-                                      initialRating: ratingBarValue1 ??= 3,
+                                      initialRating: ratingBarValue1 = 3.0,
                                       unratedColor: Color(0xFF9E9E9E),
                                       itemCount: 5,
                                       itemSize: 40,
@@ -254,10 +254,10 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                               () => ratingBarValue2 = newValue),
                                       itemBuilder: (context, index) => Icon(
                                         Icons.star_rounded,
-                                        color: Colors.white,
+                                        color: Colors.green,
                                       ),
                                       direction: Axis.horizontal,
-                                      initialRating: ratingBarValue2 ??= 3,
+                                      initialRating: ratingBarValue2 = 3,
                                       unratedColor: Color(0xFF9E9E9E),
                                       itemCount: 5,
                                       itemSize: 40,
@@ -288,10 +288,10 @@ class _StudentProfileWidgetState extends State<StudentProfileWidget> {
                                               () => ratingBarValue3 = newValue),
                                       itemBuilder: (context, index) => Icon(
                                         Icons.star_rounded,
-                                        color: Colors.white,
+                                        color: Colors.green,
                                       ),
                                       direction: Axis.horizontal,
-                                      initialRating: ratingBarValue3 ??= 3,
+                                      initialRating: ratingBarValue3 = 3,
                                       unratedColor: Color(0xFF9E9E9E),
                                       itemCount: 5,
                                       itemSize: 40,
